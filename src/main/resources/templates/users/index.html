@@ -1,5 +1,7 @@
 <h1>List Users</h1>
 
-<ul>
-    <li></li>
-</ul>
+<table>
+    <tr th:each="u : ${listUsers}">
+        <td th:text="${u.email}""></td>
+    </tr>
+</table>

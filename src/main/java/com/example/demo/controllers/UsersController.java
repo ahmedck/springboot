@@ -8,15 +8,14 @@ import org.springframework.stereotype.Controller;
 
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 
 import com.example.demo.services.InnerUserRepository;
-import org.springframework.web.bind.annotation.GetMapping;
 import com.example.demo.models.User;
-
 
 //https://www.youtube.com/watch?v=6zfIxgaVkQI
 @Controller
-@RequestMapping("/users")
+@RequestMapping("/")
 public class UsersController {
 
     @Autowired
@@ -29,9 +28,5 @@ public class UsersController {
         return "users/index";
     }
 
-    @GetMapping("/add")
-    public String add(){
-        return "add user";
-    }
     
 }
